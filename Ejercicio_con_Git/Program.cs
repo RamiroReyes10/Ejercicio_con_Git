@@ -10,6 +10,36 @@ namespace Ejercicio_con_Git
     {
         static void Main(string[] args)
         {
+            double resultado, num1 = 10, num2 = 20;
+
+            Console.WriteLine("1. Suma");
+            Console.WriteLine("2. Resta");
+            Console.WriteLine("3. Multiplicacion");
+
+            Console.Write("Elegi un opcion: ");
+            int opcion = Convert.ToInt32(Console.ReadLine());
+
+            switch (opcion)
+            {
+                case 1:
+                    resultado = Suma(num1, num2);
+                    Console.WriteLine($"El resultado de la suma es: {resultado}");
+                    break;
+
+                case 2:
+                    resultado = Resta(num1, num2);
+                    Console.WriteLine($"El resultado de la resta es: {resultado}");
+                    break;
+
+                case 3:
+                    resultado = Multiplicacion(num1, num2);
+                    Console.WriteLine($"El resultado de la multiplicacion es: {resultado}");
+                    break;
+
+                default:
+                    Console.WriteLine("Opcion no valida");
+                    break;
+            }
         }
 
         static double Suma(double num1, double num2)
